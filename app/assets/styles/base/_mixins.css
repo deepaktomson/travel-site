@@ -1,0 +1,28 @@
+@define-mixin atSmall{  /* we consider 530px device as small, we write our main css for the smallest devices */
+	@media(min-width: 530px){
+		@mixin-content;
+	}
+}
+
+@define-mixin atMedium{  /* we consider 800px device as medium, we write our main css for the smallest devices */
+	@media(min-width: 800px){
+		@mixin-content;
+	}
+}
+
+@define-mixin atLarge{  /* we consider 1200px device as large, we write our main css for the smallest devices */
+	@media(min-width: 1200px){
+		@mixin-content;
+	}
+}
+
+@define-mixin clearfix { /*adds empty content after parent,
+	just like clearfix
+	 but without ading empty div with clearfix class to html */
+	&::after {
+		content: "" ;
+		clear:both;
+		display: table;
+	}
+}
+
